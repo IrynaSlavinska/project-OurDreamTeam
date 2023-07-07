@@ -5,21 +5,94 @@
   |============================
 */
 @import url('./reset.css');
-@import url('./vite-promo.css');
 @import url('./header.css');
+@import url('./hero.css');
+@import url('./about.css');
+@import url('./manual.css');
+@import url('./catalog.css');
+@import url('./order.css');
+@import url('./modal.css');
+@import url('./footer.css');
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
+  --text-color: #141414;
+  --dark-green-color: #a1c487;
+  --light-green-color: #eaf7e5;
+  --orange-color: #fc8a11;
+  --light-peach-color: #faf3e7;
+  --light-grey-color: #f3f3f3;
+  --logo-color: #77ac63;
+  --white-color: #ffffff;
+  --transition: 300ms linear;
+}
+@font-face {
+  font-family: 'DM Sans', sans-serif;
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local('DM Sans'), url(../fonts/DMSans-Regular.woff2) format(woff2),
+    url(../fonts/DMSans-Regular.woff) format(woff);
+}
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+@font-face {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: local('DM Sans'), url(../fonts/DMSans-Medium.woff2) format(woff2),
+    url(../fonts/DMSans-Medium.woff) format(woff);
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+@font-face {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: local('DM Sans'), url(../fonts/DMSans-Bold.woff2) format(woff2),
+    url(../fonts/DMSans-Bold.woff) format(woff);
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text-color);
+  font-style: normal;
+  letter-spacing: -0.56px;
+  line-height: 1.33;
+
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.section {
+  padding: 40px 0;
+}
+
+@media screen and (min-width: 375px) {
+  .container {
+    max-width: 375px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+  .section {
+    padding: 50px 0;
+  }
+  body {
+    letter-spacing: -0.72px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+  .section {
+    padding: 62px 0;
+  }
 }
