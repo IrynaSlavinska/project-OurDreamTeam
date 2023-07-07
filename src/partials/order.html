@@ -1,0 +1,59 @@
+
+<section class="order section">
+  <div class="order-container container">
+    <div class="order-content-wrap">
+      <h2 class="order-title">Fresh Harvest Box has got you covered</h2>
+      <p class="order-text">
+        Our boxes are packed with delicious, nutritious vegetables, perfect for
+        anyone looking to eat healthier or support local farmers. Order your box
+        today and start enjoying the best that nature has to offer!
+      </p>
+      ​
+      <form class="order-form">
+        <input
+          id="order-phone"
+          class="order-input"
+          type="tel"
+          pattern="(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?"
+          title="Phone number in format +38 XXX XXX XX XX"
+          placeholder="+380 ()"
+          required
+        />
+        <button type="submit" class="order-submit-btn">Recall</button>
+      </form>
+    </div>
+    <div class="order-image-wrap">
+      <picture>
+        <source
+          srcset="
+            ./img/order/order-img-mob.jpg    1x,
+            ./img/order/order-img-mob-2x.jpg 2x
+          "
+          media="(max-width:767.98px)"
+          type="image/jpeg"
+        />
+        ​
+        <source
+          srcset="
+            ./img/order/order-img-tab.jpg        1x,
+            ./img/img/order/order-img-tab-2x.jpg 2x
+          "
+          media="(max-width:1279.98px)"
+          type="image/jpeg"
+        />
+        ​
+        <source
+          srcset="
+            ../img/order/order-img-desc.jpg   1x,
+            ./img/order/order-img-desc-2x.jpg 2x
+          "
+          media="(min-width:1280px)"
+          type="image/jpeg"
+        />
+        ​
+        <img src="./img/order/order-img-mob.jpg" alt="Model" />
+      </picture>
+    </div>
+  </div>
+</section>
+
