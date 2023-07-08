@@ -4,7 +4,14 @@
 .order-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 40px 77px;
+}
+.order-content-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .order-title {
   margin-bottom: 20px;
@@ -24,27 +31,32 @@
   font-size: 14px;
 }
 .order-form {
+  width: 260px;
   position: relative;
-  margin: 0 auto;
 }
 .order-input {
-  padding: 15px 105px 15px 24px;
-  width: 100%;
+  padding: 0 24px;
   height: 48px;
   border-radius: 100px;
   border: 1px solid rgba(20, 20, 20, 0.3);
+  background: transparent;
   color: var(--text-color);
+  outline: none;
+  transition: border var(--transition);
+}
+.order-input:focus-within {
+  border: 1px solid var(--orange-color);
 }
 .order-input::placeholder {
   color: #c1bdbd;
-  opacity: 1;
 }
 .order-submit-btn {
   position: absolute;
   right: 0;
   bottom: 0;
   padding: 15px 35px;
-  height: 48px;
+  height: 50px;
+  width: 105px;
   border-radius: 100px;
   background: var(--orange-color);
   color: var(--white-color);
@@ -52,13 +64,19 @@
   line-height: 18px;
   letter-spacing: -0.56px;
   border: none;
+  transition: background var(--transition);
 }
+.order-submit-btn:is(:hover, :focus) {
+  background: #a1c487;
+}
+
 @media screen and (min-width: 375px) {
   .order-form {
-    max-width: 350px;
+    width: 335px;
   }
   .order-input {
-    padding-right: 125px;
+    width: 185px;
+    padding-right: 115px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -76,9 +94,15 @@
     letter-spacing: -1.6px;
   }
   .order-text {
-    margin: 0 auto 40px;
     max-width: 499px;
     font-size: 18px;
+  }
+  .order-form {
+    width: 350px;
+  }
+  .order-input {
+    width: 195px;
+    padding-right: 105px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -90,6 +114,9 @@
     align-items: center;
     gap: 40px 77px;
   }
+  .order-content-wrap {
+    align-items: baseline;
+  }
   .order-title {
     margin-bottom: 40px;
     max-width: 614px;
@@ -100,11 +127,7 @@
   }
   .order-text {
     margin-bottom: 80px;
-    margin-left: 0;
     max-width: 523px;
     text-align: start;
-  }
-  .order-form {
-    margin-left: 0;
   }
 }
