@@ -1,10 +1,7 @@
 .header {
   height: 50px;
-  /* background-color: var(--white-color); */
-  box-sizing: border-box;
-  background-color: gray;
-  padding: 13px 0;
-  padding: 13px 0;
+  background-color: var(--white-color);
+  
   align-items: center;
 }
 .mobile-container {
@@ -13,31 +10,25 @@
   align-items: center;
 }
 .headerlogo-link {
+  padding: 16px 0;
   display: flex;
   gap: 8px;
   text-transform: uppercase;
   color: var(--text-color);
-  font-weight: 700;
   line-height: 1.28;
   align-items: center;
-  color: #141414;
-  text-align: center;
-
   font-size: 14px;
-  font-style: normal;
   font-weight: 700;
-  line-height: 18px;
   letter-spacing: -0.56px;
-  text-transform: uppercase;
 }
 .header-link {
-  /* color: #141414;
+  color: var(--text-color);
   text-align: center;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
-  letter-spacing: -0.56px; */
+  letter-spacing: -0.56px;
 }
 .headerlogo-icon {
   fill: var(--logo-color);
@@ -88,13 +79,21 @@
 .mobile-wrapper .headerbutton-icon {
   fill: transparent;
   stroke: var(--white-color);
+  height: 20px;
+  width: 20px;
 }
 .mobile-wrapper .header-link {
   color: var(--white-color);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.56px;
 }
 .header .header-list {
   display: flex;
   gap: 14px;
+  align-items: center;
 }
 .header-wrapper .nav {
   display: flex;
@@ -105,9 +104,15 @@
   justify-content: space-between;
   flex-direction: row;
 }
+.header-wrapper .header-button {
+  padding: 15px 0;
+  height: 20px;
+  width: 20px;
+}
 .header-wrapper .headerbutton-icon {
   stroke: var(--text-color);
   fill: transparent;
+ 
 }
 .nav {
   display: flex;
@@ -125,6 +130,22 @@
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .headerlogo-link {
-    margin-right: 250px;
+    margin-right: 245px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header-wrapper .header-button {
+    padding: 13px 0;
+    height: 24px;
+    width: 24px;
+  }
+  .header .header-list {
+    gap: 20px;
+  }
+  .header-wrapper .nav {
+    gap: 308px;
+  }
+  .headerlogo-link {
+    margin-right: 531px;
   }
 }
