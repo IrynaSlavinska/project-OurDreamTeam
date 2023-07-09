@@ -1,7 +1,7 @@
 <!-- ------------------MODAL--------------- -->
 
 <!-- додати/прибрати is-hidden після backdrop  -->
-<div class="backdrop is-hidden data-modal" data-modal>
+<div class="backdrop" data-modal>
   <div class="modal-box">
     <p class="modal-title">Your Order</p>
     <button
@@ -9,7 +9,7 @@
       class="modal-close-btn data-modal-close"
       data-modal-close
     >
-      <svg class="modal-close-icon" width="16" height="16">
+      <svg class="modal-close-icon" width="28" height="28">
         <use href="./img/veggie-icons.svg#icon-x-close"></use>
       </svg>
     </button>
@@ -18,7 +18,26 @@
 
     <ul class="modal-cards list">
       <li class="modal-card-item">
-        <input class="modal-check" type="checkbox" />
+        <!-- checkbox -->
+        <div class="checkbox-field modal-check">
+          <input
+            type="checkbox"
+            class="check-input visually-hidden"
+            name="user-privacy"
+            id="cabbage"
+            value="true"
+            checked
+          />
+          <label class="check-label" for="cabbage">
+            <span class="check-span">
+              <svg class="check-icon" width="8" height="8">
+                <use href="../img/veggie-icons.svg#icon-pick"></use>
+              </svg>
+            </span>
+          </label>
+        </div>
+        <!-- кінець чекбокса -->
+
         <p class="modal-subtitle">Cabbage Basket</p>
         <p class="text">Plant</p>
         <div class="mod-tumb">
@@ -55,7 +74,22 @@
         </div>
       </li>
       <li class="modal-card-item">
-        <input class="modal-check" type="checkbox" />
+        <div class="checkbox-field modal-check">
+          <input
+            type="checkbox"
+            class="check-input visually-hidden"
+            name="user-privacy"
+            id="tomato"
+            value="true"
+          />
+          <label class="check-label" for="tomato">
+            <span class="check-span">
+              <svg class="check-icon" width="8" height="8">
+                <use href="../img/veggie-icons.svg#icon-pick"></use>
+              </svg>
+            </span>
+          </label>
+        </div>
         <p class="modal-subtitle">Tomato Basket</p>
         <p class="text">Plant</p>
         <div class="mod-tumb">
@@ -92,7 +126,22 @@
         </div>
       </li>
       <li class="modal-card-item">
-        <input class="modal-check" type="checkbox" />
+        <div class="checkbox-field modal-check">
+          <input
+            type="checkbox"
+            class="check-input visually-hidden"
+            name="user-privacy"
+            id="veg-mix"
+            value="true"
+          />
+          <label class="check-label" for="veg-mix">
+            <span class="check-span">
+              <svg class="check-icon" width="8" height="8">
+                <use href="../img/veggie-icons.svg#icon-pick"></use>
+              </svg>
+            </span>
+          </label>
+        </div>
         <p class="modal-subtitle">Vegetables Basket</p>
         <p class="text">Plant</p>
 
