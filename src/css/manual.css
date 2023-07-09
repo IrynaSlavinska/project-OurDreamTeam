@@ -1,15 +1,31 @@
 .manual-container {
   padding: 40px 20px 0 20px;
-  background-color: #c0c0c0;
+  background-color: #faf3e7;
 }
+/* .manual-container::before {
+  content: '';
+  position: absolute;
+  top: 60px;
+  left: 62px;
+  right: 62px;
+  bottom: 60px;
+  background: #faf3e7;
+  background-image: radial-gradient(
+    circle at 30px 20px,
+    rgba(161, 196, 135, 0.69) 5px,
+    transparent 0
+  );
+  background-size: 62px 60px;
+} */
 .manual-subtitle {
   text-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.1);
   font-size: 24px;
   font-weight: 500;
-  line-height: 1.16;
+  line-height: 28px;
   letter-spacing: -0.96px;
   text-transform: uppercase;
   margin-bottom: 40px;
+  width: 295px;
 }
 .manual-list {
   display: flex;
