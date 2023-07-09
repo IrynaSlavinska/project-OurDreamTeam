@@ -58,6 +58,7 @@
 .footer_nav_link:focus {
   color: var(--dark-green-color);
 }
+
 .footer_nav_link {
   transition: color var(--transition);
 }
@@ -105,12 +106,15 @@
   max-width: 138px;
   text-align: center;
   font-style: normal;
+}
+.footer_address_link {
   transition: color var(--transition);
 }
-.footer_address_item:hover,
-.footer_address_item:focus {
+.footer_address_link:hover,
+.footer_address_link:focus {
   color: var(--dark-green-color);
 }
+
 @media screen and (min-width: 768px) {
   .footer_cnt {
     flex-direction: row;
