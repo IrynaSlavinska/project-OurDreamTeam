@@ -56,7 +56,6 @@
 }
 .menu-toggle.js-close-menu {
   stroke: var(--logo-color);
-  z-index: 5000;
   transition: fill 250ms linear;
 }
 .mobile-menu {
@@ -69,7 +68,7 @@
   transition: transform 250ms linear;
   transform: translateX(100%);
   align-items: center;
-  z-index: 4999;
+  z-index: 500;
 }
 .mobile-menu.is-open {
   transform: translateX(0);
