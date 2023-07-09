@@ -1,3 +1,20 @@
+.picture {
+  width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -27,7 +44,6 @@
     0px 0px 130.5995330810547px 0px rgba(0, 0, 0, 0.04),
     0px 0px 223px 0px rgba(0, 0, 0, 0.05);
   transition: transform var(--transition-effect);
-  outline: 1px dashed blue;
 }
 
 .is-hidden {
@@ -46,7 +62,7 @@
   font-size: 28px;
   font-style: normal;
   font-weight: 500;
-  line-height: 28px;
+  line-height: 1;
   letter-spacing: -0.04em;
   text-transform: uppercase;
   color: #141414;
@@ -66,7 +82,6 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  outline: 1px dashed;
 }
 
 .modal-close-btn:hover,
@@ -74,7 +89,9 @@
 }
 
 .modal-close-icon {
-  fill: #000000;
+  width: 16px;
+  height: 16px;
+  stroke: #000000;
 }
 
 .modal-cards {
@@ -89,8 +106,15 @@
   padding: 20px;
   border-radius: 20px;
   background-color: rgba(250, 243, 231, 1);
-  max-height: 119px;
-  outline: 1px dashed #e20707;
+  height: 119px;
+}
+
+.mod-tumb {
+  width: 94px;
+  height: 78px;
+  position: absolute;
+  right: 30px;
+  bottom: 8px;
 }
 
 .modal-check {
@@ -111,9 +135,6 @@
 }
 
 .modal-img {
-  position: absolute;
-  right: 30px;
-  bottom: 8px;
 }
 
 .text {
@@ -127,10 +148,9 @@
 
 .modal-form {
   width: 100%;
-  background-color: #ce6d6d;
-  padding: 20px;
 }
 .modal-input {
+  display: block;
   width: 100%;
   padding: 14px 24px;
   border-radius: 100px;
@@ -142,6 +162,16 @@
   border-radius: 20px;
   margin-bottom: 20px;
   resize: none;
+}
+
+.modal-input::placeholder {
+  color: rgba(20, 20, 20, 0.5);
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.28;
+  letter-spacing: -0.56px;
 }
 
 .modal-btn-send {
@@ -161,7 +191,73 @@
   text-transform: capitalize;
 }
 
-@media screen and () {
+@media screen and (max-width: 375px) {
 }
-.modal {
+
+@media screen and (min-width: 375px) {
+}
+
+@media screen and (min-width: 768px) {
+  .modal-box {
+    max-width: 704px;
+    min-height: 853px;
+    padding: 40px;
+    background-image: url(../img/modal/mod-girl.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .modal-box {
+      background-image: url('./img/modal/mod-girl@2x.jpg');
+    }
+  }
+
+  .modal-cards {
+    flex-direction: row;
+  }
+
+  .modal-card-item {
+    position: relative;
+    width: 200px;
+    height: 250px;
+
+    padding: 40px 20px 14px;
+  }
+
+  .mod-tumb {
+    width: 172px;
+    height: 142px;
+  }
+
+  .modal-form {
+    width: 360px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .modal-box {
+    max-width: 891px;
+    min-height: 911px;
+  }
+
+  .modal-cards {
+    flex-direction: row;
+  }
+
+  .modal-card-item {
+    width: 257px;
+    height: 308px;
+  }
+
+  .mod-tumb {
+    width: 243px;
+    height: 200px;
+  }
+
+  .modal-form {
+    width: 360px;
+  }
 }
