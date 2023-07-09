@@ -107,6 +107,7 @@
   border-radius: 20px;
   background-color: rgba(250, 243, 231, 1);
   height: 119px;
+  outline: 1px dashed #fc3411;
 }
 
 .mod-tumb {
@@ -115,6 +116,7 @@
   position: absolute;
   right: 30px;
   bottom: 8px;
+  outline: 1px dashed #02570c;
 }
 
 .modal-check {
@@ -135,6 +137,8 @@
 }
 
 .modal-img {
+  width: 100%;
+  outline: 1px dashed #cc03b5;
 }
 
 .text {
