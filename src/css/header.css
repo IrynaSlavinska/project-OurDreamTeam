@@ -20,6 +20,35 @@
 .header-link {
   font-size: 14px;
   line-height: 1.28;
+  transition: filter 250ms linear;
+  filter: none;
+}
+.header-wrapper .header-link:hover,
+.header-wrapper .header-link:focus {
+  filter: drop-shadow(0 0 3px var(--dark-green-color))
+    drop-shadow(0 0 5px var(--logo-color));
+}
+@keyframes swing {
+  25% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  50% {
+    -webkit-transform: translateX(6px);
+    transform: translateX(6px);
+  }
+  75% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+.header-item:hover {
+  animation: swing 0.5s ease;
+  animation-iteration-count: 1;
 }
 .headerlogo-link {
   padding: 16px 0;
@@ -33,12 +62,50 @@
 }
 .headerlogo-icon {
   fill: var(--logo-color);
+  transition: transform 250ms linear;
+  rotate: 0;
+}
+.headerlogo-link:hover .headerlogo-icon {
+  transform: rotate(90deg);
+}
+.headerlogo-text {
+  position: relative;
+}
+.headerlogo-text::before {
+  content: attr(content);
+  position: absolute;
+  text-transform: uppercase;
+  width: 2px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 1px solid var(--white-color);
+  color: var(--logo-color);
+  animation: move 7s linear infinite;
+}
+@keyframes move {
+  0% {
+    width: 0%;
+    color: var(--logo-color);
+  }
+
+  100% {
+    width: 200%;
+    color: var(--text-color);
+  }
 }
 .header-button {
   background-color: transparent;
   border: none;
   padding: 0;
   height: 20px;
+  filter: none;
+  transition: filter 250ms linear, transform 250ms linear;
+}
+.header-wrapper .header-button:hover,
+.header-wrapper .header-button:focus {
+  filter: drop-shadow(0 0 3px var(--dark-green-color))
+    drop-shadow(0 0 5px var(--logo-color));
+  transform: scale(1.3);
 }
 .headerbutton-icon {
   stroke: var(--text-color);
