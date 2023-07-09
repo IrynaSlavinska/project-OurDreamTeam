@@ -109,7 +109,7 @@
   border-radius: 20px;
   background-color: rgba(250, 243, 231, 1);
   height: 119px;
-  outline: 1px dashed #fc3411;
+  /* outline: 1px dashed #fc3411; */
 }
 
 /* checkbox */
@@ -166,7 +166,7 @@
 
 .modal-img {
   width: 100%;
-  outline: 1px dashed #cc03b5;
+  /* outline: 1px dashed #cc03b5; */
 }
 
 .text {
@@ -233,7 +233,7 @@
     right: 0;
     bottom: 0;
 
-    outline: 1px dashed #02570c;
+    /* outline: 1px dashed #02570c; */
   }
 }
 
