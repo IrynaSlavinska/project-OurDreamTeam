@@ -98,3 +98,18 @@ body {
     padding: 62px 0;
   }
 }
+
+.how-it.section {
+  padding-top: 80px;
+}
+
+@media screen and (min-width: 768px) {
+  .how-it.section {
+    padding-top: 100px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .how-it.section {
+    padding-top: 124px;
+  }
+}
