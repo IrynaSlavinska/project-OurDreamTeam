@@ -64,7 +64,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: transparent;
+  background-color: var(--dark-green-color);
   transition: transform 250ms linear;
   transform: translateX(100%);
   align-items: center;
