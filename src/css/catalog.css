@@ -181,6 +181,19 @@
 		width: 342px;
 		height: 465px;
 	}
+	.catalog-item .front,
+	.catalog-item .back {
+		padding-left: 24px;
+	}
+	.catalog-item-name {
+		margin-top: 64px;
+	}
+	.catalog-item-type {
+		margin-bottom: 13px;
+	}
+	.catalog-item-price {
+		margin-top: 32px;
+	}
 	.catalog-btn-box {
 		margin-top: 40px;
 	}
