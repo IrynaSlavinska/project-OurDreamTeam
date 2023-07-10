@@ -71,6 +71,20 @@
   background: #a1c487;
 }
 
+/** Form Validation  */
+.order-err-msg.is-invalid {
+  border: 1px solid;
+  margin: 10px 0 -38px;
+  padding: 2px 10px;
+  color: #d63301;
+  background-color: #ffccba;
+  transform: scale(1);
+  transition: transform var(--transition);
+}
+.order-err-msg.is-valid {
+  transform: scale(0);
+}
+
 @media screen and (min-width: 375px) {
   .order-form {
     max-width: 350px;
