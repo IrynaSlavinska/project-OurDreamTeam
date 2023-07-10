@@ -1,9 +1,9 @@
-.about-container {
-  padding-bottom: 80px;
+.about-container.container {
+  margin-bottom: 80px;
 }
 
 .about-title {
-  text-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.1);
+  text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.1);
   font-size: 28px;
   font-weight: 500;
   line-height: 1.14;
@@ -23,7 +23,7 @@
   gap: 20px;
 }
 .about-text {
-  text-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.1);
+  text-shadow: 0px 4px 70px  rgba(0, 0, 0, 0.1);
   font-size: 14px;
   font-weight: 400;
   line-height: 1.28;
@@ -33,7 +33,7 @@
 /* Media */
 
 @media screen and (min-width: 768px) {
-  .about-container {
+  .about-container.container {
     padding-bottom: 100px;
   }
 
@@ -51,8 +51,6 @@
     flex-direction: row;
     gap: 20px;
     align-items: center;
-    margin-bottom: 40px;
-    margin-top: 100px;
   }
 
   .about-vegetables-text {
@@ -74,10 +72,15 @@
 }
 
 @media screen and (min-width: 1280px) {
+.about-container.container {
+  margin-bottom: 124px;
+}
+
   .about-vegetables {
     display: flex;
     justify-content: space-between;
   }
+
   .about-title {
     font-size: 48px;
     font-weight: 500;
