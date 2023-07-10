@@ -1,3 +1,7 @@
+.about-container {
+  padding-bottom: 80px;
+}
+
 .about-title {
   text-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.1);
   font-size: 28px;
@@ -8,14 +12,12 @@
 }
 
 .about-vegetables {
-  margin-top: 80px;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px 20px;
+  gap: 20px;
 }
 .about-vegetables-text {
-  padding-bottom: 80px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -31,6 +33,11 @@
 /* Media */
 
 @media screen and (min-width: 768px) {
+  .about-container {
+    padding-bottom: 100px;
+  }
+
+
   .about-title {
     font-size: 40px;
     font-weight: 500;
@@ -52,8 +59,7 @@
     display: flex;
     flex-direction: row;
     gap: 20px;
-    max-width: 616px;
-    padding-bottom: 100px;
+    max-width: 687px;
   }
 
   .about-text {
@@ -71,7 +77,6 @@
   .about-vegetables {
     display: flex;
     justify-content: space-between;
-    margin-top: 124px;
   }
   .about-title {
     font-size: 48px;
