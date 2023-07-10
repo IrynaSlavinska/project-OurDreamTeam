@@ -19,6 +19,7 @@
 	text-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.1);
 	font-size: 14px;
 	line-height: 1.28;
+	letter-spacing: -0.56px;
 }
 .catalog-list {
 	display: -webkit-box;
@@ -169,10 +170,14 @@
 @media (min-width: 768px) {
 	.catalog-title {
 		font-size: 28px;
+		letter-spacing: -1.12px;
+		line-height: 1.14;
 	}
 	.catalog-subtitle {
 		font-size: 18px;
 		max-width: 562px;
+		letter-spacing: -0.72px;
+		line-height: 1.33;
 	}
 	.catalog-list {
 		margin: 0 auto;
@@ -204,6 +209,11 @@
 	}
 	.catalog-title {
 		font-size: 40px;
+		line-height: 1.1;
+		letter-spacing: -1.6px;
+	}
+	.catalog-subtitle {
+		line-height: 1.33;
 	}
 
 	.catalog-list {
