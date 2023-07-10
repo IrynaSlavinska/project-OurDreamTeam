@@ -5,6 +5,7 @@
 }
 .manual-container {
   position: relative;
+  max-width: 335px;
 }
 .bg-wrap::before {
   content: '';
@@ -15,11 +16,11 @@
   bottom: 0;
   background: #faf3e7;
   background-image: radial-gradient(
-    circle at 30px 20px,
-    rgba(161, 196, 135, 0.3) 5px,
+    circle at 6px 25px,
+    rgba(161, 196, 135, 0.3) 2.5px,
     transparent 0
   );
-  background-size: 62px 60px;
+  background-size: 45px 45px;
   z-index: -2;
 }
 .manual-subtitle {
@@ -38,7 +39,6 @@
   gap: 21px;
   margin-bottom: 20px;
   counter-reset: manual-item;
-  /* position: relative; */
 }
 .manual-item {
   display: flex;
@@ -54,7 +54,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* position: absolute; */
   background-color: var(--dark-green-color);
   height: 40px;
   width: 40px;
