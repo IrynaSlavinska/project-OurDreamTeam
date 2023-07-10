@@ -1,5 +1,4 @@
 .picture {
-  width: 100%;
 }
 
 .visually-hidden {
@@ -21,7 +20,8 @@
   z-index: 999;
   width: 100%;
   height: 100%;
-  background-color: rgba(46, 47, 66, 0.1);
+  background-color: rgba(46, 47, 66, 0.2);
+  overflow: auto;
 }
 
 .modal-box {
@@ -32,16 +32,15 @@
   padding: 20px;
   width: calc(100% - 2 * 15px);
   max-width: 335px;
-  max-height: 903px;
-  height: 100vh;
+  min-height: 903px;
   margin: auto;
   border-radius: 20px;
   background: #fff;
-  box-shadow: 0px 0px 8.775463104248047px 0px rgba(0, 0, 0, 0.01),
-    0px 0px 18.17037010192871px 0px rgba(0, 0, 0, 0.02),
-    0px 0px 36.23749923706055px 0px rgba(0, 0, 0, 0.03),
-    0px 0px 71.02963256835938px 0px rgba(0, 0, 0, 0.03),
-    0px 0px 130.5995330810547px 0px rgba(0, 0, 0, 0.04),
+  box-shadow: 0px 0px 8.775px 0px rgba(0, 0, 0, 0.01),
+    0px 0px 18.17px 0px rgba(0, 0, 0, 0.02),
+    0px 0px 36.2px 0px rgba(0, 0, 0, 0.03),
+    0px 0px 71.02px 0px rgba(0, 0, 0, 0.03),
+    0px 0px 130.6px 0px rgba(0, 0, 0, 0.04),
     0px 0px 223px 0px rgba(0, 0, 0, 0.05);
   transition: transform var(--transition-effect);
 }
@@ -58,30 +57,27 @@
 
 .modal-title {
   margin-bottom: 40px;
-  font-family: DM Sans;
   font-size: 28px;
-  font-style: normal;
   font-weight: 500;
   line-height: 1;
   letter-spacing: -0.04em;
   text-transform: uppercase;
-  color: #141414;
+  color: var(--text-color);
   text-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.1);
 }
 
 .modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: auto;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   border: none;
   background-color: transparent;
-
-  position: absolute;
-  top: 20px;
-  right: 20px;
 }
 
 .modal-close-btn:hover,
@@ -89,8 +85,8 @@
 }
 
 .modal-close-icon {
-  width: 16px;
-  height: 16px;
+  width: 12px;
+  height: 12px;
   stroke: #000000;
 }
 
@@ -105,11 +101,29 @@
 
 .modal-card-item {
   position: relative;
-  padding: 20px 30px 8px 20px;
+  padding-top: 20px;
+  padding-left: 20px;
   border-radius: 20px;
   background-color: rgba(250, 243, 231, 1);
-  height: 119px;
-  /* outline: 1px dashed #fc3411; */
+  min-height: 119px;
+  outline: 1px dashed #fc3411;
+}
+
+.modal-subtitle {
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.72px;
+}
+
+.mod-tumb .modal-img {
+  outline: 1px dashed #0328cc;
+}
+
+.text {
+}
+.picture {
 }
 
 /* checkbox */
@@ -117,16 +131,11 @@
   position: absolute;
   top: 14px;
   right: 14px;
-  width: 20px;
-  height: 20px;
 }
 
-.checkbox-field {
-}
 .check-label {
 }
-.check-label .check-link {
-}
+
 .check-input {
 }
 
@@ -134,15 +143,13 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   border-radius: 4px;
   fill: transparent;
   border: 1.5px solid var(--dark-green-color);
   transition: background-color var(--transition-effect),
     border var(--transition-effect), fill var(--transition-effect);
-  /* outline: 1px dashed #fc3411; */
 }
 
 .check-input:checked + .check-label .check-span {
@@ -153,26 +160,6 @@
 }
 
 /* кінець чекбокса */
-
-.modal-subtitle {
-  color: #141414;
-  font-family: DM Sans;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 24px;
-  letter-spacing: -0.72px;
-}
-
-.modal-img {
-  width: 100%;
-  /* outline: 1px dashed #cc03b5; */
-}
-
-.text {
-}
-.picture {
-}
 
 /* FORM FORM FORM */
 
@@ -200,7 +187,7 @@
 
 .modal-input::placeholder {
   color: rgba(20, 20, 20, 0.5);
-  font-family: DM Sans;
+  font-family: 'DM Sans', sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -214,9 +201,7 @@
   border-radius: 100px;
   border: none;
   background: #fc8a11;
-
   color: #fff;
-  font-family: DM Sans;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -230,8 +215,8 @@
     width: 94px;
     height: 78px;
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: 30px;
+    bottom: 8px;
 
     /* outline: 1px dashed #02570c; */
   }
