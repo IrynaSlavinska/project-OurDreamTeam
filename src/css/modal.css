@@ -186,6 +186,7 @@
   padding: 14px 24px;
   border-radius: 100px;
   margin-bottom: 14px;
+  outline: transparent;
   border: 1px solid rgba(20, 20, 20, 0.3);
   transition: border-color var(--transition);
 }

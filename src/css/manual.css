@@ -1,7 +1,26 @@
 .manual-container.container {
   padding-top: 40px;
-  background-color: #faf3e7;
   border-radius: 40px;
+  overflow: hidden;
+}
+.manual-container {
+  position: relative;
+}
+.bg-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #faf3e7;
+  background-image: radial-gradient(
+    circle at 30px 20px,
+    rgba(161, 196, 135, 0.3) 5px,
+    transparent 0
+  );
+  background-size: 62px 60px;
+  z-index: -2;
 }
 .manual-subtitle {
   text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.1);
@@ -11,9 +30,8 @@
   letter-spacing: -0.96px;
   text-transform: uppercase;
   margin-bottom: 40px;
-  max-width: 295px;
+  max-width: 304px;
 }
-
 .manual-list {
   display: flex;
   flex-direction: column;
@@ -23,7 +41,7 @@
 .manual-item {
 }
 .manual-item::before {
-  display: block;
+  display: inline-block;
   position: absolute;
   content: '1';
   background-color: var(--dark-green-color);
@@ -47,43 +65,53 @@
 }
 
 @media screen and (min-width: 768px) {
-  .manual-container {
+  .manual-container.container {
+    border-radius: 80px;
+    max-width: 704px;
+  }
+  .bg-wrap {
     display: flex;
     flex-direction: row-reverse;
+    gap: 40px;
   }
   .manual-wrap {
-    margin-top: 40px;
-    margin-left: auto;
+    padding-top: 40px;
   }
   .manual-subtitle {
     font-size: 28px;
     line-height: 1.14;
     letter-spacing: -1.12px;
   }
+  .manual-list {
+    gap: 24px;
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 1280px) {
   .manual-container.container {
+    max-width: 1216px;
     padding-left: 80px;
     padding-right: 80px;
   }
-  .manual-container {
+  .bg-wrap {
     justify-content: space-between;
   }
-  .manual-wrap {
-    margin-left: unset;
-    max-width: 512px;
-  }
+
   .manual-subtitle {
+    max-width: 512px;
     font-size: 40px;
     line-height: 1.1;
     letter-spacing: -1.6px;
-    max-width: 512px;
   }
   .manual-list {
     gap: 28px;
+    margin-bottom: 0;
   }
   .manual-text {
     max-width: 289px;
+  }
+  .manual-text:nth-child(even) {
+    max-width: 166px;
   }
 }
