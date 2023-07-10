@@ -62,6 +62,19 @@ body {
 
   background-color: #ffffff;
 }
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #a1c487;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 2px solid #a1c487;
+}
 
 .container {
   max-width: 100%;
