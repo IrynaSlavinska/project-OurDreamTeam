@@ -1,25 +1,127 @@
+.manual-container.container {
+  padding-top: 40px;
+  border-radius: 40px;
+  overflow: hidden;
+}
 .manual-container {
-  padding: 40px 20px 0 20px;
-  background-color: #c0c0c0;
+  position: relative;
+}
+.bg-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #faf3e7;
+  background-image: radial-gradient(
+    circle at 30px 20px,
+    rgba(161, 196, 135, 0.3) 5px,
+    transparent 0
+  );
+  background-size: 62px 60px;
+  z-index: -2;
 }
 .manual-subtitle {
-  text-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.1);
+  text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.1);
   font-size: 24px;
   font-weight: 500;
   line-height: 1.16;
   letter-spacing: -0.96px;
   text-transform: uppercase;
   margin-bottom: 40px;
+  max-width: 304px;
 }
 .manual-list {
   display: flex;
   flex-direction: column;
   gap: 21px;
   margin-bottom: 20px;
+  counter-reset: manual-item;
+  /* position: relative; */
 }
 .manual-item {
+  display: flex;
+  align-items: center;
+}
+.manual-item::before {
+  counter-increment: manual-item;
+  content: counter(manual-item);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.28;
+  letter-spacing: -0.72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: absolute; */
+  background-color: var(--dark-green-color);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
 }
 .manual-text {
+  padding-left: 14px;
+  text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.56px;
+  max-width: 180px;
 }
 .manual-image {
+}
+.manual-image img {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .manual-container.container {
+    border-radius: 80px;
+    max-width: 704px;
+  }
+  .bg-wrap {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 40px;
+  }
+  .manual-wrap {
+    padding-top: 40px;
+  }
+  .manual-subtitle {
+    font-size: 28px;
+    line-height: 1.14;
+    letter-spacing: -1.12px;
+  }
+  .manual-list {
+    gap: 24px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .manual-container.container {
+    max-width: 1216px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .bg-wrap {
+    justify-content: space-between;
+  }
+
+  .manual-subtitle {
+    max-width: 512px;
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: -1.6px;
+  }
+  .manual-list {
+    gap: 28px;
+    margin-bottom: 0;
+  }
+  .manual-text {
+    max-width: 289px;
+  }
+  .manual-text.second {
+    max-width: 166px;
+  }
 }

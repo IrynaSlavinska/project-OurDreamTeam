@@ -1,4 +1,4 @@
-.order {
+.order.section {
   padding-bottom: 80px;
 }
 .order-container {
@@ -25,23 +25,25 @@
   text-transform: uppercase;
 }
 .order-text {
+  max-width: 310px;
   margin-bottom: 40px;
   text-align: center;
   text-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.1);
   font-size: 14px;
 }
 .order-form {
-  width: 260px;
+  max-width: 260px;
   position: relative;
 }
 .order-input {
-  padding: 0 24px;
+  padding: 15px 115px 15px 10px;
+  width: 240px;
   height: 48px;
-  border-radius: 100px;
   border: 1px solid rgba(20, 20, 20, 0.3);
+  border-radius: 100px;
   background: transparent;
-  color: var(--text-color);
   outline: none;
+  color: var(--text-color);
   transition: border var(--transition);
 }
 .order-input:focus-within {
@@ -55,8 +57,8 @@
   right: 0;
   bottom: 0;
   padding: 15px 35px;
-  height: 50px;
-  width: 105px;
+  height: 100%;
+  height: 48px;
   border-radius: 100px;
   background: var(--orange-color);
   color: var(--white-color);
@@ -70,13 +72,28 @@
   background: #a1c487;
 }
 
+/** Form Validation  */
+.order-err-msg.is-invalid {
+  border: 1px solid;
+  margin: 10px 0 -38px;
+  padding: 2px 10px;
+  color: #d63301;
+  background-color: #ffccba;
+  transform: scale(1);
+  transition: transform var(--transition);
+}
+.order-err-msg.is-valid {
+  transform: scale(0);
+}
+
 @media screen and (min-width: 375px) {
   .order-form {
-    width: 335px;
+    max-width: 350px;
+    width: 100%;
   }
   .order-input {
-    width: 185px;
-    padding-right: 115px;
+    width: 100%;
+    padding: 15px 115px 15px 24px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -94,15 +111,8 @@
     letter-spacing: -1.6px;
   }
   .order-text {
-    max-width: 499px;
+    max-width: 480px;
     font-size: 18px;
-  }
-  .order-form {
-    width: 350px;
-  }
-  .order-input {
-    width: 195px;
-    padding-right: 105px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -127,7 +137,7 @@
   }
   .order-text {
     margin-bottom: 80px;
-    max-width: 523px;
+    max-width: 500px;
     text-align: start;
   }
 }
