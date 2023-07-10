@@ -6,13 +6,17 @@
       openModalBtn4: document.querySelector("[data-modal-open4]"),
       closeModalBtn: document.querySelector("[data-modal-close]"),
       modal: document.querySelector("[data-modal]"),
-    };
+      };
   
-    refs.openModalBtn.addEventListener("click", toggleModal);
+   
+  
+  refs.openModalBtn.addEventListener("click", toggleModal);
+  
     refs.openModalBtn2.addEventListener("click", toggleModal);
     refs.openModalBtn3.addEventListener("click", toggleModal);
     refs.openModalBtn4.addEventListener("click", toggleModal);
     refs.closeModalBtn.addEventListener("click", toggleModal);
+    
   
   refs.modal.addEventListener('click', onBackdropClose);
   document.body.addEventListener('keydown', onEscClose);
