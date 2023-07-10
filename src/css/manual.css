@@ -121,10 +121,7 @@
   .manual-text {
     max-width: 289px;
   }
-  .manual-list::nth-child(2) > .manual-text {
+  .manual-text.second {
     max-width: 166px;
   }
-  /* .manual-text:nth-child(2) {
-    max-width: 166px;
-  } */
 }
