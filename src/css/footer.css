@@ -11,7 +11,6 @@
 
 .footer_wrap_logo {
   display: flex;
-
   flex-direction: column;
   align-items: center;
 }
@@ -105,9 +104,7 @@
   width: 40px;
   height: 40px;
   padding: 0;
-  transition: border-color var(--transition);
-  transition: transform var(--transition);
-  transition: box-shadow var(--transition);
+  transition: all var(--transition);
 }
 .footer_soc_icon {
   fill: currentColor;
