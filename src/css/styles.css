@@ -26,7 +26,7 @@
   --white-color: #ffffff;
   --transition: 300ms linear;
 }
-@font-face {
+/* @font-face {
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -51,10 +51,10 @@
   font-display: swap;
   src: local('DM Sans'), url(../fonts/DMSans-Bold.woff2) format(woff2),
     url(../fonts/DMSans-Bold.woff) format(woff);
-}
+} */
 
 body {
-  font-family: 'DM Sans';
+  font-family: 'DM Sans', sans-serif;
   color: var(--text-color);
   font-style: normal;
   letter-spacing: -0.56px;
