@@ -11,14 +11,6 @@
   overflow: hidden;
 }
 
-/* body:has([data-modal]) {
-  position: fixed;
-
-  height: 100vh;
-  overflow-y: hidden;
-  margin: auto;
-} */
-
 .backdrop {
   position: fixed;
   top: 0;
@@ -27,14 +19,14 @@
   height: 100%;
   background-color: rgba(46, 47, 66, 0.2);
   transition: opacity var(--transition), visibility var(--transition);
-  overflow: scroll;
+  overflow: auto;
 }
 
 .modal-box {
   position: absolute;
-  top: 50%;
+  top: 1%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%) scale(1);
   padding: 20px;
   width: calc(100% - 2 * 15px);
   max-width: 335px;
