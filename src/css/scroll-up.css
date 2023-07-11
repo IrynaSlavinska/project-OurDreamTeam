@@ -1,0 +1,56 @@
+.scroll-up-btn {
+  position: relative;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: block;
+  width: 40px;
+  height: 0;
+  background-color: transparent;
+  border: 2px solid var(--dark-green-color);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity var(--transition), height var(--transition),
+    background-color var(--transition), border-color var(--transition);
+}
+
+.scroll-up-btn.show {
+  /* display: block; */
+  opacity: 1;
+  height: 40px;
+}
+
+.scroll-up-btn-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: var(--dark-green-color);
+  stroke: var(--dark-green-color);
+  stroke-width: 1px;
+  transition: fill var(--transition), stroke var(--transition);
+}
+
+.scroll-up-btn:hover,
+.scroll-up-btn:focus {
+  background-color: var(--dark-green-color);
+  border-color: var(--dark-green-color);
+}
+
+.scroll-up-btn:hover .scroll-up-btn-icon,
+.scroll-up-btn:focus .scroll-up-btn-icon {
+  fill: #e4f0da;
+  stroke: #e4f0da;
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1280px) {
+  .scroll-up-btn {
+    width: 46px;
+  }
+  .scroll-up-btn.show {
+    height: 46px;
+  }
+}

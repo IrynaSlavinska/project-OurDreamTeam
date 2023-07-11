@@ -15,6 +15,8 @@
 @import url('./modal.css');
 @import url('./footer.css');
 
+@import url('./scroll-up.css');
+
 :root {
   --text-color: #141414;
   --dark-green-color: #a1c487;
@@ -26,13 +28,13 @@
   --white-color: #ffffff;
   --transition: 300ms linear;
 }
-/* @font-face {
+@font-face {
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: local('DM Sans'), url(../fonts/DMSans-Regular.woff2) format(woff2),
-    url(../fonts/DMSans-Regular.woff) format(woff);
+  src: local('DM Sans'), url(./fonts/DMSans-Regular.woff2) format(woff2),
+    url(./fonts/DMSans-Regular.woff) format(woff);
 }
 
 @font-face {
@@ -40,8 +42,8 @@
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-  src: local('DM Sans'), url(../fonts/DMSans-Medium.woff2) format(woff2),
-    url(../fonts/DMSans-Medium.woff) format(woff);
+  src: local('DM Sans'), url(./fonts/DMSans-Medium.woff2) format(woff2),
+    url(./fonts/DMSans-Medium.woff) format(woff);
 }
 
 @font-face {
@@ -49,9 +51,9 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  src: local('DM Sans'), url(../fonts/DMSans-Bold.woff2) format(woff2),
-    url(../fonts/DMSans-Bold.woff) format(woff);
-} */
+  src: local('DM Sans'), url(./fonts/DMSans-Bold.woff2) format(woff2),
+    url(./fonts/DMSans-Bold.woff) format(woff);
+}
 
 body {
   font-family: 'DM Sans', sans-serif;
@@ -75,7 +77,9 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;
   border: 2px solid #a1c487;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .container {
   max-width: 100%;
   margin: 0 auto;
@@ -84,6 +88,9 @@ body::-webkit-scrollbar-thumb {
 .section {
   padding-top: 40px;
   padding-bottom: 40px;
+}
+.how-it.section {
+  padding-top: 80px;
 }
 
 @media screen and (min-width: 375px) {
@@ -102,10 +109,11 @@ body::-webkit-scrollbar-thumb {
   body {
     letter-spacing: -0.72px;
   }
+  .how-it.section {
+    padding-top: 100px;
+  }
 }
-html {
-  scroll-behavior: smooth;
-}
+
 @media screen and (min-width: 1280px) {
   .container {
     max-width: 1280px;
@@ -113,18 +121,6 @@ html {
   .section {
     padding: 62px 0;
   }
-}
-
-.how-it.section {
-  padding-top: 80px;
-}
-
-@media screen and (min-width: 768px) {
-  .how-it.section {
-    padding-top: 100px;
-  }
-}
-@media screen and (min-width: 1280px) {
   .how-it.section {
     padding-top: 124px;
   }

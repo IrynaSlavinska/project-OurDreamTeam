@@ -1,6 +1,3 @@
-.picture {
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -17,24 +14,23 @@
 .backdrop {
   position: fixed;
   top: 0;
-  z-index: 999;
+  z-index: 99999;
   width: 100%;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.2);
-  overflow: auto;
   transition: opacity var(--transition), visibility var(--transition);
+  overflow: auto;
 }
 
 .modal-box {
   position: absolute;
-  top: 50%;
+  top: 1%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%) scale(1);
   padding: 20px;
   width: calc(100% - 2 * 15px);
   max-width: 335px;
-  min-height: 903px;
-  margin: auto;
+  margin: 0 auto;
   border-radius: 20px;
   background: #fff;
   box-shadow: 0px 0px 8.775px 0px rgba(0, 0, 0, 0.01),
@@ -43,7 +39,7 @@
     0px 0px 71.02px 0px rgba(0, 0, 0, 0.03),
     0px 0px 130.6px 0px rgba(0, 0, 0, 0.04),
     0px 0px 223px 0px rgba(0, 0, 0, 0.05);
-  transition: transform var(--transition-effect);
+  transition: transform var(--transition);
 }
 
 .is-hidden {
@@ -107,6 +103,15 @@
   border-radius: 20px;
   background-color: rgba(250, 243, 231, 1);
   min-height: 119px;
+  transition: border-color var(--transition), transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.modal-card-item:has(.check-input:focus),
+.modal-card-item:hover {
+  border-color: var(--dark-green-color);
+  transform: translate(-1.5px, -1.5px);
+  box-shadow: 1px 1px 5px rgba(49, 81, 65, 0.4);
 }
 
 .modal-subtitle {
@@ -161,12 +166,27 @@
   border-radius: 4px;
   fill: transparent;
   border: 1.5px solid var(--dark-green-color);
-  transition: background-color var(--transition-effect),
-    border var(--transition-effect), fill var(--transition-effect);
+  transition: border-color var(--transition), transform var(--transition),
+    box-shadow var(--transition);
 }
 
-.check-input:checked + .check-label .check-span {
+.check-input:checked + .check-span {
   fill: var(--dark-green-color);
+}
+
+.check-label:hover .check-span,
+.check-label:focus .check-span,
+.modal-card-item:has(.check-input:focus) .check-span {
+  border-color: var(--dark-green-color);
+  transform: translate(-1px, -1px);
+  box-shadow: 1px 1px 5px rgba(49, 81, 65, 0.4);
+}
+
+.modal-card-item:has(.check-input:focus),
+.modal-card-item:hover {
+  border-color: var(--dark-green-color);
+  transform: translate(-1.5px, -1.5px);
+  box-shadow: 1px 1px 5px rgba(49, 81, 65, 0.4);
 }
 
 .check-icon {
@@ -197,12 +217,7 @@
 }
 
 .modal-input:focus,
-.textarea:focus {
-  border-color: var(--orange-color);
-}
-
-.modal-input:hover,
-.textarea:hover {
+.modal-input:hover {
   border-color: var(--orange-color);
 }
 
@@ -211,7 +226,6 @@
   border-radius: 20px;
   margin-bottom: 20px;
   resize: none;
-  transition: border-color var(--transition);
 }
 
 .modal-input::placeholder {
@@ -223,6 +237,19 @@
   line-height: 1.28;
   letter-spacing: -0.04em;
 }
+
+/* Прибирає личильник з інпута "намбер": */
+/* Chrome, Safari, Edge, Opera */
+/* input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} */
+
+/* Firefox */
+/* input[type='number'] {
+  -moz-appearance: textfield;
+} */
 
 .modal-btn-send {
   min-width: 92px;
@@ -246,6 +273,8 @@
   background-color: #a1c487;
 }
 
+/* MEDIA MEDIA MEDIA MEDIA MEDIA */
+/* MEDIA MEDIA MEDIA MEDIA MEDIA */
 /* MEDIA MEDIA MEDIA MEDIA MEDIA */
 
 @media screen and (min-width: 375px) {
@@ -305,7 +334,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+
     width: 200px;
     height: 250px;
     padding-top: 40px;

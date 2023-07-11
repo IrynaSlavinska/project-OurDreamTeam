@@ -118,6 +118,20 @@
 .headerbutton-icon:focus {
   stroke: var(--logo-color);
 }
+@keyframes moveright {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100px); 
+    opacity: 0;
+  }
+}
+
+.header-button:focus {
+  animation: moveright 3s linear forwards; 
+}
 .menu-toggle.js-open-menu,
 .menu-toggle.js-close-menu {
   fill: var(--logo-color);

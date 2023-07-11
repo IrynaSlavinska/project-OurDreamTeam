@@ -6,6 +6,7 @@ import './js/catalog';
 import './js/order';
 import './js/modal';
 import './js/footer';
+import './js/scroll-up';
 
 (() => {
   const refs = {

@@ -1,4 +1,4 @@
-let reg = /[0-9]/;
+let reg = /(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?/;
 
 let inp = document.querySelector('#order-phone');
 let errField = document.querySelector('.order-err-msg');
