@@ -196,6 +196,11 @@
   border-color: var(--orange-color);
 }
 
+.modal-input:hover,
+.textarea:hover {
+  border-color: var(--orange-color);
+}
+
 .textarea {
   height: 132px;
   border-radius: 20px;
