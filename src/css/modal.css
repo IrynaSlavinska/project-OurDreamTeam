@@ -111,8 +111,8 @@
     box-shadow var(--transition);
 }
 
-.modal-card-item:hover,
-.modal-card-item:focus {
+.modal-card-item:has(.check-input:focus),
+.modal-card-item:hover {
   border-color: var(--dark-green-color);
   transform: translate(-1.5px, -1.5px);
   box-shadow: 1px 1px 5px rgba(49, 81, 65, 0.4);
@@ -174,16 +174,23 @@
     box-shadow var(--transition);
 }
 
-.check-input:checked + .check-label .check-span {
+.check-input:checked + .check-span {
   fill: var(--dark-green-color);
 }
 
-.check-span:hover,
-.check-span:focus {
+.check-label:hover .check-span,
+.check-label:focus .check-span,
+.modal-card-item:has(.check-input:focus) .check-span {
   border-color: var(--dark-green-color);
   transform: translate(-1px, -1px);
   box-shadow: 1px 1px 5px rgba(49, 81, 65, 0.4);
 }
+
+/* .modal-card-item:has(.check-input:focus) {
+  border-color: var(--dark-green-color);
+  transform: translate(-1.5px, -1.5px);
+  box-shadow: 1px 1px 5px rgba(49, 81, 65, 0.4);
+} */
 
 .check-icon {
   width: 6px;
@@ -330,7 +337,7 @@ input::-webkit-inner-spin-button {
     position: relative;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
+
     width: 200px;
     height: 250px;
     padding-top: 40px;
