@@ -101,8 +101,8 @@
   justify-content: center;
   border-radius: 10px;
   border: 1px solid #141414;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   padding: 0;
   transition: all var(--transition);
 }
@@ -177,6 +177,6 @@
     margin: 0;
   }
   .footer_nav_list {
-    margin-top: 84px;
+    align-items: center;
   }
 }
