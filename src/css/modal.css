@@ -170,8 +170,6 @@
   border-radius: 4px;
   fill: transparent;
   border: 1.5px solid var(--dark-green-color);
-  transition: background-color var(--transition), border var(--transition),
-    fill var(--transition);
   transition: border-color var(--transition), transform var(--transition),
     box-shadow var(--transition);
 }
@@ -215,12 +213,7 @@
 }
 
 .modal-input:focus,
-.textarea:focus {
-  border-color: var(--orange-color);
-}
-
-.modal-input:hover,
-.textarea:hover {
+.modal-input:hover {
   border-color: var(--orange-color);
 }
 
@@ -229,7 +222,6 @@
   border-radius: 20px;
   margin-bottom: 20px;
   resize: none;
-  transition: border-color var(--transition);
 }
 
 .modal-input::placeholder {
@@ -242,17 +234,18 @@
   letter-spacing: -0.04em;
 }
 
+/* Прибирає личильник з інпута "намбер": */
 /* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
+/* input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
+} */
 
 /* Firefox */
-input[type='number'] {
+/* input[type='number'] {
   -moz-appearance: textfield;
-}
+} */
 
 .modal-btn-send {
   min-width: 92px;
