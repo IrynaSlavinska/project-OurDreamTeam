@@ -1,5 +1,9 @@
+.about-container.container {
+  margin-bottom: 80px;
+}
+
 .about-title {
-  text-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.1);
+  text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.1);
   font-size: 28px;
   font-weight: 500;
   line-height: 1.14;
@@ -8,20 +12,18 @@
 }
 
 .about-vegetables {
-  margin-top: 80px;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px 20px;
+  gap: 20px;
 }
 .about-vegetables-text {
-  padding-bottom: 80px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 .about-text {
-  text-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.1);
+  text-shadow: 0px 4px 70px  rgba(0, 0, 0, 0.1);
   font-size: 14px;
   font-weight: 400;
   line-height: 1.28;
@@ -44,16 +46,13 @@
     flex-direction: row;
     gap: 20px;
     align-items: center;
-    margin-bottom: 40px;
-    margin-top: 100px;
   }
 
   .about-vegetables-text {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    max-width: 616px;
-    padding-bottom: 100px;
+    max-width: 687px;
   }
 
   .about-text {
@@ -68,11 +67,15 @@
 }
 
 @media screen and (min-width: 1280px) {
+.about-container.container {
+  margin-bottom: 124px;
+}
+
   .about-vegetables {
     display: flex;
     justify-content: space-between;
-    margin-top: 124px;
   }
+
   .about-title {
     font-size: 48px;
     font-weight: 500;
