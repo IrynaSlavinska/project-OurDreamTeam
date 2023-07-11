@@ -1,11 +1,17 @@
 .manual-container.container {
+}
+.manual-container {
+  padding-left: 20px;
+  padding-left: 20px;
+}
+.manual-relative {
+  position: relative;
   padding-top: 40px;
+  padding-left: 20px;
   border-radius: 40px;
   overflow: hidden;
 }
-.manual-container {
-  position: relative;
-}
+
 .bg-wrap::before {
   content: '';
   position: absolute;
@@ -15,11 +21,11 @@
   bottom: 0;
   background: #faf3e7;
   background-image: radial-gradient(
-    circle at 30px 20px,
-    rgba(161, 196, 135, 0.3) 5px,
+    circle at 6px 25px,
+    rgba(161, 196, 135, 0.3) 2.5px,
     transparent 0
   );
-  background-size: 62px 60px;
+  background-size: 45px 45px;
   z-index: -2;
 }
 .manual-subtitle {
@@ -32,13 +38,13 @@
   margin-bottom: 40px;
   max-width: 304px;
 }
+
 .manual-list {
   display: flex;
   flex-direction: column;
   gap: 21px;
   margin-bottom: 20px;
   counter-reset: manual-item;
-  /* position: relative; */
 }
 .manual-item {
   display: flex;
@@ -54,10 +60,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* position: absolute; */
   background-color: var(--dark-green-color);
-  height: 40px;
   width: 40px;
+  height: 38px;
   border-radius: 50%;
 }
 .manual-text {
@@ -66,7 +71,7 @@
   font-size: 14px;
   line-height: 1.28;
   letter-spacing: -0.56px;
-  max-width: 180px;
+  max-width: 190px;
 }
 .manual-image {
 }
@@ -77,17 +82,24 @@
 @media screen and (min-width: 768px) {
   .manual-container.container {
     border-radius: 80px;
-    max-width: 704px;
+    position: relative;
+  }
+  .manual-image img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
   .bg-wrap {
     display: flex;
     flex-direction: row-reverse;
-    gap: 40px;
   }
   .manual-wrap {
     padding-top: 40px;
+    margin-bottom: 80px;
+    margin-right: 0;
   }
   .manual-subtitle {
+    max-width: 274px;
     font-size: 28px;
     line-height: 1.14;
     letter-spacing: -1.12px;
@@ -96,18 +108,21 @@
     gap: 24px;
     margin-bottom: 0;
   }
+  .manual-item::before {
+    width: 46px;
+    height: 44px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
   .manual-container.container {
-    max-width: 1216px;
-    padding-left: 80px;
-    padding-right: 80px;
   }
   .bg-wrap {
     justify-content: space-between;
   }
-
+  .manual-image img {
+    left: 80px;
+  }
   .manual-subtitle {
     max-width: 512px;
     font-size: 40px;
@@ -119,9 +134,9 @@
     margin-bottom: 0;
   }
   .manual-text {
-    max-width: 289px;
+    max-width: 298px;
   }
   .manual-text.second {
-    max-width: 166px;
+    max-width: 168px;
   }
 }

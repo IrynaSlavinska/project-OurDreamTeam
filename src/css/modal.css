@@ -22,6 +22,7 @@
   height: 100%;
   background-color: rgba(46, 47, 66, 0.2);
   overflow: auto;
+  transition: opacity var(--transition), visibility var(--transition);
 }
 
 .modal-box {
@@ -42,8 +43,7 @@
     0px 0px 71.02px 0px rgba(0, 0, 0, 0.03),
     0px 0px 130.6px 0px rgba(0, 0, 0, 0.04),
     0px 0px 223px 0px rgba(0, 0, 0, 0.05);
-  transition: transform var(--transition-effect);
-  /* overflow: auto; */
+  transition: transform var(--transition);
 }
 
 .is-hidden {
@@ -72,14 +72,14 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 20px;
+  top: 22px;
   right: 20px;
+  padding: 0;
 
   width: 24px;
   height: 24px;
   border: none;
   background-color: transparent;
-  /* outline: 1px dashed #fc8a11; */
 }
 
 .modal-close-btn:hover,
@@ -107,7 +107,15 @@
   border-radius: 20px;
   background-color: rgba(250, 243, 231, 1);
   min-height: 119px;
-  /* outline: 1px dashed #fc3411; */
+  transition: border-color var(--transition), transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.modal-card-item:hover,
+.modal-card-item:focus {
+  border-color: var(--dark-green-color);
+  transform: translate(-1.5px, -1.5px);
+  box-shadow: 1px 1px 5px rgba(49, 81, 65, 0.4);
 }
 
 .modal-subtitle {
@@ -116,6 +124,7 @@
   font-weight: 700;
   line-height: 1.33;
   letter-spacing: -0.04em;
+  margin-bottom: 2px;
 }
 
 .text,
@@ -124,13 +133,15 @@
 }
 
 .text {
-  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
 }
 
 .mod-tumb .modal-img {
   width: 100%;
   object-fit: cover;
-  /* outline: 1px dashed #0328cc; */
 }
 
 .picture {
@@ -150,23 +161,35 @@
 }
 
 .check-span {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 16px;
   height: 16px;
+  padding: 0;
   border-radius: 4px;
   fill: transparent;
   border: 1.5px solid var(--dark-green-color);
-  transition: background-color var(--transition-effect),
-    border var(--transition-effect), fill var(--transition-effect);
+  transition: background-color var(--transition), border var(--transition),
+    fill var(--transition);
+  transition: border-color var(--transition), transform var(--transition),
+    box-shadow var(--transition);
 }
 
 .check-input:checked + .check-label .check-span {
   fill: var(--dark-green-color);
 }
 
+.check-span:hover,
+.check-span:focus {
+  border-color: var(--dark-green-color);
+  transform: translate(-1px, -1px);
+  box-shadow: 1px 1px 5px rgba(49, 81, 65, 0.4);
+}
+
 .check-icon {
+  width: 6px;
+  height: 6px;
 }
 
 /* кінець чекбокса */
@@ -219,6 +242,18 @@
   letter-spacing: -0.04em;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
 .modal-btn-send {
   min-width: 92px;
   padding: 12px 24px;
@@ -241,7 +276,9 @@
   background-color: #a1c487;
 }
 
-/* MEDIA MEDIA MEDIA */
+/* MEDIA MEDIA MEDIA MEDIA MEDIA */
+/* MEDIA MEDIA MEDIA MEDIA MEDIA */
+/* MEDIA MEDIA MEDIA MEDIA MEDIA */
 
 @media screen and (min-width: 375px) {
 }
@@ -253,8 +290,6 @@
     position: absolute;
     right: 30px;
     bottom: 8px;
-
-    /* outline: 1px dashed #02570c; */
   }
 }
 
@@ -275,6 +310,16 @@
     }
   }
 
+  .modal-close-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .modal-close-icon {
+    width: 28px;
+    height: 28px;
+  }
+
   .modal-title {
     font-size: 40px;
     font-weight: 500;
@@ -290,9 +335,23 @@
 
   .modal-card-item {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
     width: 200px;
     height: 250px;
     padding-top: 40px;
+    padding-bottom: 14px;
+  }
+
+  .check-span {
+    width: 20px;
+    height: 20px;
+  }
+
+  .check-icon {
+    width: 8px;
+    height: 8px;
   }
 
   .mod-tumb {
@@ -303,6 +362,12 @@
 
   .modal-form {
     width: 360px;
+  }
+
+  .modal-btn-send {
+    min-width: 114px;
+    padding: 15px 35px;
+    border-radius: 100px;
   }
 }
 
@@ -321,7 +386,7 @@
   }
 
   .modal-cards {
-    flex-direction: row;
+    gap: 20px;
   }
 
   .modal-card-item {
@@ -336,7 +401,8 @@
 
   .modal-subtitle {
     font-size: 24px;
-    line-height: 1.67;
+    line-height: 1.16;
+    margin-bottom: 8px;
   }
 
   .modal-form {

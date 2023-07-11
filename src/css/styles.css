@@ -26,7 +26,7 @@
   --white-color: #ffffff;
   --transition: 300ms linear;
 }
-@font-face {
+/* @font-face {
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -36,7 +36,7 @@
 }
 
 @font-face {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans';
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -45,13 +45,13 @@
 }
 
 @font-face {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans';
   font-weight: 700;
   font-style: normal;
   font-display: swap;
   src: local('DM Sans'), url(../fonts/DMSans-Bold.woff2) format(woff2),
     url(../fonts/DMSans-Bold.woff) format(woff);
-}
+} */
 
 body {
   font-family: 'DM Sans', sans-serif;
@@ -61,6 +61,19 @@ body {
   line-height: 1.33;
 
   background-color: #ffffff;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #a1c487;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 2px solid #a1c487;
 }
 
 .container {
