@@ -23,7 +23,7 @@
   gap: 20px;
 }
 .about-text {
-  text-shadow: 0px 4px 70px  rgba(0, 0, 0, 0.1);
+  text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.1);
   font-size: 14px;
   font-weight: 400;
   line-height: 1.28;
@@ -51,7 +51,6 @@
   .about-vegetables-text {
     display: flex;
     flex-direction: row;
-    gap: 20px;
     max-width: 687px;
   }
 
@@ -60,6 +59,7 @@
     font-weight: 400;
     line-height: 1.33;
     letter-spacing: -0.72px;
+    max-width: 279px;
   }
   .about-text:first-child {
     max-width: 317px;
@@ -67,9 +67,9 @@
 }
 
 @media screen and (min-width: 1280px) {
-.about-container.container {
-  margin-bottom: 124px;
-}
+  .about-container.container {
+    margin-bottom: 124px;
+  }
 
   .about-vegetables {
     display: flex;
@@ -82,6 +82,15 @@
     line-height: 1.04;
     letter-spacing: -1.92px;
     text-transform: uppercase;
-    max-width: 700px;
+    max-width: 614px;
+  }
+  .about-vegetables-text {
+    gap: 40px;
+  }
+  .about-text {
+    max-width: 294px;
+  }
+  .about-text:first-child {
+    max-width: 353px;
   }
 }

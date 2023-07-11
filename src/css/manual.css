@@ -123,6 +123,9 @@
   .manual-image img {
     left: 80px;
   }
+  .manual-wrap {
+    padding-right: 80px;
+  }
   .manual-subtitle {
     max-width: 512px;
     font-size: 40px;
