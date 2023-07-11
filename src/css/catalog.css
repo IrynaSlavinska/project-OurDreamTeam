@@ -46,7 +46,6 @@
 	background-color: #eaf7e5;
 }
 .catalog-item-name {
-	margin-top: 40px;
 	margin-bottom: 8px;
 	font-size: 24px;
 	font-weight: 700;
@@ -111,6 +110,7 @@
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	padding: 40px 25px 20px 20px;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
@@ -155,12 +155,13 @@
 }
 
 .back-text {
-	padding: 100px 20px 0 0;
+	padding-top: 30px;
+	padding-left: 15px;
 	margin-bottom: 30px;
 }
 
 .back-text-2 {
-	padding-right: 20px;
+	padding-left: 15px;
 }
 
 .none {
