@@ -11,12 +11,13 @@
   overflow: hidden;
 }
 
-body:has([data-modal-open]) {
+/* body:has([data-modal]) {
   position: fixed;
-  top: 0;
+
   height: 100vh;
   overflow-y: hidden;
-}
+  margin: auto;
+} */
 
 .backdrop {
   position: fixed;
