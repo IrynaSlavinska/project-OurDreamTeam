@@ -122,7 +122,9 @@
 	transition: -webkit-transform 0.8s ease-in-out;
 	-o-transition: transform 0.8s ease-in-out;
 	transition: transform 0.8s ease-in-out;
-	transition: transform 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
+	transition:
+		transform 0.8s ease-in-out,
+		-webkit-transform 0.8s ease-in-out;
 }
 
 .catalog-item .back {
@@ -201,6 +203,11 @@
 	}
 	.catalog-btn-box {
 		margin-top: 40px;
+	}
+	.catalog-btn {
+		width: 114px;
+		height: 114px;
+		font-size: 18px;
 	}
 }
 @media (min-width: 1280px) {
