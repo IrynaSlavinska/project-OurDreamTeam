@@ -43,7 +43,7 @@
     0px 0px 71.02px 0px rgba(0, 0, 0, 0.03),
     0px 0px 130.6px 0px rgba(0, 0, 0, 0.04),
     0px 0px 223px 0px rgba(0, 0, 0, 0.05);
-  transition: transform var(--transition-effect);
+  transition: transform var(--transition);
 }
 
 .is-hidden {
@@ -107,6 +107,15 @@
   border-radius: 20px;
   background-color: rgba(250, 243, 231, 1);
   min-height: 119px;
+  transition: border-color var(--transition), transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.modal-card-item:hover,
+.modal-card-item:focus {
+  border-color: var(--dark-green-color);
+  transform: translate(-1.5px, -1.5px);
+  box-shadow: 1px 1px 5px rgba(49, 81, 65, 0.4);
 }
 
 .modal-subtitle {
@@ -161,12 +170,21 @@
   border-radius: 4px;
   fill: transparent;
   border: 1.5px solid var(--dark-green-color);
-  transition: background-color var(--transition-effect),
-    border var(--transition-effect), fill var(--transition-effect);
+  transition: background-color var(--transition), border var(--transition),
+    fill var(--transition);
+  transition: border-color var(--transition), transform var(--transition),
+    box-shadow var(--transition);
 }
 
 .check-input:checked + .check-label .check-span {
   fill: var(--dark-green-color);
+}
+
+.check-span:hover,
+.check-span:focus {
+  border-color: var(--dark-green-color);
+  transform: translate(-1px, -1px);
+  box-shadow: 1px 1px 5px rgba(49, 81, 65, 0.4);
 }
 
 .check-icon {
@@ -224,6 +242,18 @@
   letter-spacing: -0.04em;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
 .modal-btn-send {
   min-width: 92px;
   padding: 12px 24px;
@@ -246,6 +276,8 @@
   background-color: #a1c487;
 }
 
+/* MEDIA MEDIA MEDIA MEDIA MEDIA */
+/* MEDIA MEDIA MEDIA MEDIA MEDIA */
 /* MEDIA MEDIA MEDIA MEDIA MEDIA */
 
 @media screen and (min-width: 375px) {
@@ -305,7 +337,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     width: 200px;
     height: 250px;
     padding-top: 40px;
