@@ -54,7 +54,7 @@
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans';
   color: var(--text-color);
   font-style: normal;
   letter-spacing: -0.56px;
