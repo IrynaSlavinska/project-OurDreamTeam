@@ -54,13 +54,26 @@
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans';
   color: var(--text-color);
   font-style: normal;
   letter-spacing: -0.56px;
   line-height: 1.33;
 
   background-color: #ffffff;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #a1c487;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 2px solid #a1c487;
 }
 
 .container {
@@ -89,6 +102,9 @@ body {
   body {
     letter-spacing: -0.72px;
   }
+}
+html {
+  scroll-behavior: smooth;
 }
 @media screen and (min-width: 1280px) {
   .container {

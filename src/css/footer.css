@@ -36,10 +36,15 @@
 .footer_logo_link:focus {
   fill: var(--dark-green-color);
 }
+.footer_logo_link:hover .footer_logo_svg,
+.footer_logo_link:focus .footer_logo_svg {
+  transform: rotate(90deg);
+}
 
 .footer_logo_svg {
   margin-right: 8px;
   transition: fill var(--transition);
+  transition: transform var(--transition);
 }
 .footer_nav_cnt {
   margin-bottom: 40px;
@@ -54,13 +59,19 @@
   line-height: 18px;
   letter-spacing: -0.56px;
 }
+.footer_nav_item:hover,
+.footer_nav_item:focus {
+  animation: swing 0.5s ease;
+  animation-iteration-count: 1;
+}
 .footer_nav_link:hover,
 .footer_nav_link:focus {
-  color: var(--dark-green-color);
+  filter: drop-shadow(0 0 3px var(--dark-green-color))
+    drop-shadow(0 0 5px var(--logo-color));
 }
 
 .footer_nav_link {
-  transition: color var(--transition);
+  transition: filter var(--transition);
 }
 .footer_soc_cnt {
   margin-bottom: 40px;
@@ -73,10 +84,17 @@
 .footer_soc_link:hover,
 .footer_soc_link:focus {
   border-color: var(--dark-green-color);
+  transform: translate(-3px, -3px);
+  box-shadow: 0px 2px 5px 0px rgb(49, 81, 65);
 }
 .footer_soc_link:hover .footer_soc_icon,
 .footer_soc_link:focus .footer_soc_icon {
   fill: var(--dark-green-color);
+}
+.footer_soc_link:active {
+  border: 1px solid #141414;
+  transform: translate(0px, 0px);
+  box-shadow: unset;
 }
 .footer_soc_link {
   display: flex;
@@ -88,6 +106,8 @@
   height: 40px;
   padding: 0;
   transition: border-color var(--transition);
+  transition: transform var(--transition);
+  transition: box-shadow var(--transition);
 }
 .footer_soc_icon {
   fill: currentColor;
@@ -108,11 +128,12 @@
   font-style: normal;
 }
 .footer_address_link {
-  transition: color var(--transition);
+  transition: filter var(--transition);
 }
 .footer_address_link:hover,
 .footer_address_link:focus {
-  color: var(--dark-green-color);
+  filter: drop-shadow(0 0 3px var(--dark-green-color))
+    drop-shadow(0 0 5px var(--logo-color));
 }
 
 @media screen and (min-width: 768px) {
@@ -120,6 +141,10 @@
     flex-direction: row;
     gap: 171px;
     align-items: unset;
+  }
+  .footer_img {
+    min-width: 349px;
+    height: 179px;
   }
   .footer_wrap_logo_nav {
     display: flex;
@@ -150,9 +175,11 @@
     display: flex;
     flex-direction: row;
     gap: 166px;
-    align-items: center;
   }
   .footer_logo_link {
     margin: 0;
+  }
+  .footer_nav_list {
+    margin-top: 84px;
   }
 }
