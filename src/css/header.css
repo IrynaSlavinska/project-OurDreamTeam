@@ -76,21 +76,23 @@
   content: attr(content);
   position: absolute;
   text-transform: uppercase;
-  width: 2px;
   overflow: hidden;
   white-space: nowrap;
   border-right: 1px solid var(--white-color);
   color: var(--logo-color);
-  animation: move 7s linear infinite;
+  animation: move 15s linear infinite;
 }
 @keyframes move {
   0% {
     width: 0%;
     color: var(--logo-color);
   }
-
+  20% {
+    width: 101%;
+    color: var(--logo-color);
+  }
   100% {
-    width: 200%;
+    width: 101%;
     color: var(--text-color);
   }
 }
