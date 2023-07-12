@@ -63,7 +63,7 @@
 	height: 249px;
 }
 .catalog-item-price {
-	margin-top: 22px;
+	margin-top: 26px;
 	line-height: 1.28;
 	letter-spacing: -0.28px;
 	font-size: 14px;
@@ -195,11 +195,12 @@
 		font-size: 18px;
 	}
 	.catalog-item-price {
+		margin-top: 32px;
 		font-size: 18px;
 	}
 	.catalog-item .front,
 	.catalog-item .back {
-		padding-left: 24px;
+		padding-top: 64px 34px 24px 24px;
 	}
 	.catalog-item-name {
 		font-size: 28px;
@@ -239,7 +240,9 @@
 		margin: unset;
 		width: 389px;
 	}
+
 	.catalog-item-name {
 		font-size: 32px;
+		margin-bottom: 7px;
 	}
 }
