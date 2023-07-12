@@ -11,7 +11,6 @@
   border-radius: 40px;
   overflow: hidden;
 }
-
 .bg-wrap::before {
   content: '';
   position: absolute;
@@ -94,6 +93,9 @@
     flex-direction: row-reverse;
     align-items: end;
     gap: 40px;
+  }
+  .manual-relative {
+    border-radius: 80px;
   }
   .manual-wrap {
     padding-top: 40px;
