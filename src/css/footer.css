@@ -22,9 +22,12 @@
 .footer_logo_link {
   text-transform: uppercase;
   display: flex;
+  max-width: 130px;
   align-items: center;
   justify-content: center;
-  margin-bottom: 40px;
+
+  margin: 0 auto 40px;
+
   font-weight: 700;
   line-height: 18px;
   letter-spacing: -0.56px;
@@ -147,6 +150,7 @@
     display: flex;
     flex-direction: column;
   }
+
   .footer_soc_cnt {
     margin-bottom: 43px;
   }
@@ -174,9 +178,14 @@
     gap: 166px;
   }
   .footer_logo_link {
-    margin: 0;
+    margin-bottom: 0;
   }
   .footer_nav_list {
     align-items: center;
+  }
+  .footer_wrap_contact {
+    justify-content: space-between;
+    flex-direction: column;
+    display: flex;
   }
 }
