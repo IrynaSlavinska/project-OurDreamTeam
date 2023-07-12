@@ -82,16 +82,18 @@
 @media screen and (min-width: 768px) {
   .manual-container.container {
     border-radius: 80px;
-    position: relative;
+    /* position: relative; */
   }
   .manual-image img {
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
-    left: 0;
+    left: 0; */
   }
   .bg-wrap {
     display: flex;
     flex-direction: row-reverse;
+    align-items: end;
+    gap: 40px;
   }
   .manual-wrap {
     padding-top: 40px;
@@ -117,14 +119,16 @@
 @media screen and (min-width: 1280px) {
   .manual-container.container {
   }
+
   .bg-wrap {
+    /* gap: 110px; */
     justify-content: space-between;
   }
   .manual-image img {
-    left: 80px;
+    margin-left: 80px;
   }
   .manual-wrap {
-    padding-right: 80px;
+    padding-right: 40px;
   }
   .manual-subtitle {
     max-width: 512px;
