@@ -91,7 +91,6 @@
   border-radius: 20px;
   background-color: rgba(250, 243, 231, 1);
   min-height: 119px;
-  cursor: pointer;
   transition: border-color var(--transition), transform var(--transition),
     box-shadow var(--transition);
 }
@@ -103,6 +102,7 @@
   transform: translate(-1.5px, -1.5px);
   box-shadow: 1px 1px 5px rgba(49, 81, 65, 0.4);
 }
+
 .modal-subtitle {
   color: var(--text-color);
   font-size: 18px;
@@ -111,6 +111,7 @@
   letter-spacing: -0.04em;
   margin-bottom: 2px;
 }
+
 .text,
 .modal-subtitle {
   padding-left: 20px;
@@ -207,7 +208,17 @@
   line-height: 1.28;
   letter-spacing: -0.04em;
 }
-
+/* Прибирає личильник з інпута "намбер": */
+/* Chrome, Safari, Edge, Opera */
+/* input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} */
+/* Firefox */
+/* input[type='number'] {
+  -moz-appearance: textfield;
+} */
 .modal-btn-send {
   min-width: 92px;
   padding: 12px 24px;
@@ -233,7 +244,6 @@
   right: 14px;
 }
 .modal-checkbox-container {
-  display: flex;
   cursor: pointer;
 }
 .modal-checkbox-container:hover .check-span,
@@ -250,8 +260,6 @@
 .modal-card-item:hover .modal-content {
   border-color: var(--dark-green-color);
 } */
-.modal-content {
-}
 /* MEDIA MEDIA MEDIA MEDIA MEDIA */
 /* MEDIA MEDIA MEDIA MEDIA MEDIA */
 /* MEDIA MEDIA MEDIA MEDIA MEDIA */
