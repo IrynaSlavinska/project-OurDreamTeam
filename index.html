@@ -28,8 +28,8 @@
       referrerpolicy="no-referrer"
     />
     
-    <script type="module" crossorigin src="/project-OurDreamTeam/assets/index-98534caf.js"></script>
-    <link rel="stylesheet" href="/project-OurDreamTeam/assets/index-2d980a60.css">
+    <script type="module" crossorigin src="/project-OurDreamTeam/assets/index-d7e32917.js"></script>
+    <link rel="stylesheet" href="/project-OurDreamTeam/assets/index-5aec74f8.css">
   </head>
   <body>
     <!-- Ihor -->
@@ -783,7 +783,7 @@
 
     <!-- Maryna -->
     <!-- ------------------MODAL--------------- -->
-
+​
 <!-- додати/прибрати is-hidden після backdrop  -->
 <div class="backdrop is-hidden" data-modal>
   <div class="modal-box">
@@ -793,31 +793,29 @@
         <use href="/project-OurDreamTeam/assets/veggie-icons-4cda258b.svg#icon-x-close"></use>
       </svg>
     </button>
-
+    ​
     <!-- CARDS  CARDS  CARDS -->
-
+    ​
     <ul class="modal-cards list">
-      <li class="modal-card-item">
+      <li class="modal-card-item modal-checkbox-container">
+        <!-- checkbox -->
+        <input
+          type="checkbox"
+          class="check-input visually-hidden"
+          name="cabbage"
+          id="cabbage"
+          value="true"
+        />
         <label class="check-label" for="cabbage">
-          <!-- checkbox -->
-          <div class="modal-check">
-            <input
-              type="checkbox"
-              class="check-input visually-hidden"
-              name="cabbage"
-              id="cabbage"
-              value="true"
-            />
-
-            <span class="check-span">
-              <svg class="check-icon" width="8" height="8">
-                <use href="/project-OurDreamTeam/assets/veggie-icons-4cda258b.svg#icon-pick"></use>
-              </svg>
-            </span>
-          </div>
-
-          <!-- кінець чекбокса -->
-
+          <span class="check-span">
+            <svg class="check-icon" width="8" height="8">
+              <use href="/project-OurDreamTeam/assets/veggie-icons-4cda258b.svg#icon-pick"></use>
+            </svg>
+          </span>
+        </label>
+        <!-- кінець чекбокса -->
+        ​
+        <div class="modal-content">
           <p class="modal-subtitle">Cabbage Basket</p>
           <p class="text">Plant</p>
           <div class="mod-tumb">
@@ -843,25 +841,27 @@
               />
             </picture>
           </div>
-        </label>
+        </div>
       </li>
-      <li class="modal-card-item">
+      <li class="modal-card-item modal-checkbox-container">
+        <!-- checkbox -->
+        <input
+          type="checkbox"
+          class="check-input visually-hidden"
+          name="tomato"
+          id="tomato"
+          value="true"
+        />
         <label class="check-label" for="tomato">
-          <div class="checkbox-field modal-check">
-            <input
-              type="checkbox"
-              class="check-input visually-hidden"
-              name="tomato"
-              id="tomato"
-              value="true"
-            />
-
-            <span class="check-span">
-              <svg class="check-icon" width="8" height="8">
-                <use href="/project-OurDreamTeam/assets/veggie-icons-4cda258b.svg#icon-pick"></use>
-              </svg>
-            </span>
-          </div>
+          <span class="check-span">
+            <svg class="check-icon" width="8" height="8">
+              <use href="/project-OurDreamTeam/assets/veggie-icons-4cda258b.svg#icon-pick"></use>
+            </svg>
+          </span>
+        </label>
+        <!-- кінець чекбокса -->
+        ​
+        <div class="modal-content">
           <p class="modal-subtitle">Tomato Basket</p>
           <p class="text">Plant</p>
           <div class="mod-tumb">
@@ -882,33 +882,34 @@
                 class="modal-img"
                 src="/project-OurDreamTeam/assets/mod-desk-tomato-a82a244b.png"
                 alt="large tomatoes on twigs in a basket"
-                width="94"
-                height="78"
+                width="257"
+                height="308"
               />
             </picture>
           </div>
-        </label>
+        </div>
       </li>
-      <li class="modal-card-item">
+      <li class="modal-card-item modal-checkbox-container">
+        <!-- checkbox -->
+        <input
+          type="checkbox"
+          class="check-input visually-hidden"
+          name="veg-mix"
+          id="veg-mix"
+          value="true"
+        />
         <label class="check-label" for="veg-mix">
-          <div class="checkbox-field modal-check">
-            <input
-              type="checkbox"
-              class="check-input visually-hidden"
-              name="veg-mix"
-              id="veg-mix"
-              value="true"
-            />
-
-            <span class="check-span">
-              <svg class="check-icon" width="8" height="8">
-                <use href="/project-OurDreamTeam/assets/veggie-icons-4cda258b.svg#icon-pick"></use>
-              </svg>
-            </span>
-          </div>
+          <span class="check-span">
+            <svg class="check-icon" width="8" height="8">
+              <use href="/project-OurDreamTeam/assets/veggie-icons-4cda258b.svg#icon-pick"></use>
+            </svg>
+          </span>
+        </label>
+        <!-- кінець чекбокса -->
+        ​
+        <div class="modal-content">
           <p class="modal-subtitle">Vegetables Basket</p>
           <p class="text">Plant</p>
-
           <div class="mod-tumb">
             <picture class="picture">
               <source
@@ -927,17 +928,17 @@
                 class="modal-img"
                 src="/project-OurDreamTeam/assets/mod-desk-vegetables-3a19a1bb.png"
                 alt="assorted green vegetables in a basket"
-                width="94"
-                height="78"
+                width="257"
+                height="308"
               />
             </picture>
           </div>
-        </label>
+        </div>
       </li>
     </ul>
-
+    ​
     <!-- FORM FORM FORM -->
-
+    ​
     <div class="modal-form-box">
       <form class="modal-form">
         <input
@@ -969,7 +970,7 @@
           autocomplete="off"
           pattern="[\d ]{10,30}"
         />
-
+        ​
         <textarea
           class="modal-input textarea"
           id="user-comment"
