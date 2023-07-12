@@ -157,42 +157,6 @@
   background: #f9f7f4;
 }
 
-/* .hero-reviews-list:hover .hero-reviews-item:first-child,
-.hero-reviews-list:focus .hero-reviews-item:first-child {
-  transform: scale(120%);
-}
-.hero-reviews-list:hover .hero-reviews-item:nth-child(2),
-.hero-reviews-list:focus .hero-reviews-item:nth-child(2) {
-  transform: translateX(50%) scale(120%);
-}
-
-.hero-reviews-list:hover .hero-reviews-item:nth-child(3),
-.hero-reviews-list:focus .hero-reviews-item:nth-child(3) {
-  transform: translateX(100%) scale(120%);
-}
-
-.hero-reviews-list:hover .hero-reviews-item:nth-child(4),
-.hero-reviews-list:focus .hero-reviews-item:nth-child(4) {
-  transform: translateX(150%) scale(120%);
-} */
-
-/* ---------------------------------------------------- */
-
-/* .hero-reviews-list:hover .hero-reviews-item:nth-child(2),
-.hero-reviews-list:focus .hero-reviews-item:nth-child(2) {
-  transform: translateX(-65%);
-}
-
-.hero-reviews-list:hover .hero-reviews-item:nth-child(3),
-.hero-reviews-list:focus .hero-reviews-item:nth-child(3) {
-  transform: translateX(-130%);
-}
-
-.hero-reviews-list:hover .hero-reviews-item:nth-child(4),
-.hero-reviews-list:focus .hero-reviews-item:nth-child(4) {
-  transform: translateX(-195%);
-} */
-
 /* --------------MOBILE-------------- */
 
 @media screen and (min-width: 375px) {
@@ -264,21 +228,6 @@
     font-size: 12px;
     line-height: 1.16; /* 14/12 */
   }
-
-  /* .hero-reviews-list:hover .hero-reviews-item:nth-child(2),
-  .hero-reviews-list:focus .hero-reviews-item:nth-child(2) {
-    transform: translateX(-67%);
-  }
-
-  .hero-reviews-list:hover .hero-reviews-item:nth-child(3),
-  .hero-reviews-list:focus .hero-reviews-item:nth-child(3) {
-    transform: translateX(-134%);
-  }
-
-  .hero-reviews-list:hover .hero-reviews-item:nth-child(4),
-  .hero-reviews-list:focus .hero-reviews-item:nth-child(4) {
-    transform: translateX(-201%);
-  } */
 }
 
 /* --------------DESKTOP-------------- */
