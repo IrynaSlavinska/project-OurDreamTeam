@@ -10,7 +10,6 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
 .backdrop {
   position: fixed;
   top: 0;
@@ -21,7 +20,6 @@
   transition: opacity var(--transition), visibility var(--transition);
   overflow: auto;
 }
-
 .modal-box {
   position: absolute;
   top: 1%;
@@ -41,17 +39,14 @@
     0px 0px 223px 0px rgba(0, 0, 0, 0.05);
   transition: transform var(--transition);
 }
-
 .is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
-
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
 }
-
 .modal-title {
   margin-bottom: 40px;
   font-size: 28px;
@@ -62,7 +57,6 @@
   color: var(--text-color);
   text-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.1);
 }
-
 .modal-close-btn {
   display: flex;
   justify-content: center;
@@ -71,49 +65,44 @@
   top: 22px;
   right: 20px;
   padding: 0;
-
   width: 24px;
   height: 24px;
   border: none;
   background-color: transparent;
 }
-
 .modal-close-btn:hover,
 .modal-close-btn:focus {
 }
-
 .modal-close-icon {
   width: 24px;
   height: 24px;
   stroke: #000000;
 }
-
 /* CARDS  CARDS  CARDS */
-
 .modal-cards {
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin-bottom: 40px;
 }
-
 .modal-card-item {
   position: relative;
   padding-top: 20px;
   border-radius: 20px;
   background-color: rgba(250, 243, 231, 1);
   min-height: 119px;
+  cursor: pointer;
   transition: border-color var(--transition), transform var(--transition),
     box-shadow var(--transition);
 }
 
 .modal-card-item:has(.check-input:focus),
+.modal-card-item:has(.check-input:checked),
 .modal-card-item:hover {
   border-color: var(--dark-green-color);
   transform: translate(-1.5px, -1.5px);
   box-shadow: 1px 1px 5px rgba(49, 81, 65, 0.4);
 }
-
 .modal-subtitle {
   color: var(--text-color);
   font-size: 18px;
@@ -122,40 +111,32 @@
   letter-spacing: -0.04em;
   margin-bottom: 2px;
 }
-
 .text,
 .modal-subtitle {
   padding-left: 20px;
 }
-
 .text {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.28;
   letter-spacing: -0.02em;
 }
-
 .mod-tumb .modal-img {
   width: 100%;
   object-fit: cover;
 }
-
 .picture {
 }
-
 /* checkbox */
 .modal-check {
   position: absolute;
   top: 14px;
   right: 14px;
 }
-
 .check-label {
 }
-
 .check-input {
 }
-
 .check-span {
   display: flex;
   justify-content: center;
@@ -169,11 +150,9 @@
   transition: border-color var(--transition), transform var(--transition),
     box-shadow var(--transition);
 }
-
 .check-input:checked + .check-span {
   fill: var(--dark-green-color);
 }
-
 .check-label:hover .check-span,
 .check-label:focus .check-span,
 .modal-card-item:has(.check-input:focus) .check-span {
@@ -181,27 +160,21 @@
   transform: translate(-1px, -1px);
   box-shadow: 1px 1px 5px rgba(49, 81, 65, 0.4);
 }
-
 .modal-card-item:has(.check-input:focus),
 .modal-card-item:hover {
   border-color: var(--dark-green-color);
   transform: translate(-1.5px, -1.5px);
   box-shadow: 1px 1px 5px rgba(49, 81, 65, 0.4);
 }
-
 .check-icon {
   width: 6px;
   height: 6px;
 }
-
 /* кінець чекбокса */
-
 /* FORM FORM FORM */
-
 .modal-form-box {
   width: 100%;
 }
-
 .modal-form {
   width: 100%;
 }
@@ -215,19 +188,16 @@
   border: 1px solid rgba(20, 20, 20, 0.3);
   transition: border-color var(--transition);
 }
-
 .modal-input:focus,
 .modal-input:hover {
   border-color: var(--orange-color);
 }
-
 .textarea {
   height: 132px;
   border-radius: 20px;
   margin-bottom: 20px;
   resize: none;
 }
-
 .modal-input::placeholder {
   color: rgba(20, 20, 20, 0.5);
   font-family: 'DM Sans', sans-serif;
@@ -237,19 +207,6 @@
   line-height: 1.28;
   letter-spacing: -0.04em;
 }
-
-/* Прибирає личильник з інпута "намбер": */
-/* Chrome, Safari, Edge, Opera */
-/* input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-} */
-
-/* Firefox */
-/* input[type='number'] {
-  -moz-appearance: textfield;
-} */
 
 .modal-btn-send {
   min-width: 92px;
@@ -265,21 +222,41 @@ input::-webkit-inner-spin-button {
   line-height: 1.28;
   letter-spacing: -0.04em;
   text-transform: capitalize;
-
   transition: background-color var(--transition);
 }
-
 .modal-btn-send:is(:hover, :focus) {
   background-color: #a1c487;
 }
-
+.check-span {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+.modal-checkbox-container {
+  display: flex;
+  cursor: pointer;
+}
+.modal-checkbox-container:hover .check-span,
+.modal-checkbox-container:focus .check-span,
+.check-input:focus ~ .check-label .check-span {
+  border-color: var(--dark-green-color);
+  transform: translate(-1px, -1px);
+  box-shadow: 1px 1px 5px rgba(49, 81, 65, 0.4);
+}
+.check-input:checked ~ .check-label .check-span {
+  fill: var(--dark-green-color);
+}
+/* .modal-card-item .check-input:focus ~ .modal-content,
+.modal-card-item:hover .modal-content {
+  border-color: var(--dark-green-color);
+} */
+.modal-content {
+}
 /* MEDIA MEDIA MEDIA MEDIA MEDIA */
 /* MEDIA MEDIA MEDIA MEDIA MEDIA */
 /* MEDIA MEDIA MEDIA MEDIA MEDIA */
-
 @media screen and (min-width: 375px) {
 }
-
 @media screen and (max-width: 767px) {
   .mod-tumb {
     width: 94px;
@@ -289,7 +266,6 @@ input::-webkit-inner-spin-button {
     bottom: 8px;
   }
 }
-
 @media screen and (min-width: 768px) {
   .modal-box {
     max-width: 704px;
@@ -298,7 +274,6 @@ input::-webkit-inner-spin-button {
     background-repeat: no-repeat;
     background-position: bottom right;
   }
-
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
@@ -306,17 +281,14 @@ input::-webkit-inner-spin-button {
       background-image: url('./img/modal/mod-girl-tabl@2x.jpg');
     }
   }
-
   .modal-close-btn {
     width: 28px;
     height: 28px;
   }
-
   .modal-close-icon {
     width: 28px;
     height: 28px;
   }
-
   .modal-title {
     font-size: 40px;
     font-weight: 500;
@@ -325,55 +297,45 @@ input::-webkit-inner-spin-button {
     text-transform: uppercase;
     text-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.1);
   }
-
   .modal-cards {
     flex-direction: row;
   }
-
   .modal-card-item {
     position: relative;
     display: flex;
     flex-direction: column;
-
     width: 200px;
     height: 250px;
     padding-top: 40px;
     padding-bottom: 14px;
   }
-
   .check-span {
     width: 20px;
     height: 20px;
   }
-
   .check-icon {
     width: 8px;
     height: 8px;
   }
-
   .mod-tumb {
     width: 172px;
     height: 142px;
     margin: auto;
   }
-
   .modal-form {
     width: 360px;
   }
-
   .modal-btn-send {
     min-width: 114px;
     padding: 15px 35px;
     border-radius: 100px;
   }
 }
-
 @media screen and (min-width: 1280px) {
   .modal-box {
     max-width: 891px;
     background-image: url(../img/modal/mod-girl-desk.png);
   }
-
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
@@ -381,27 +343,22 @@ input::-webkit-inner-spin-button {
       background-image: url('./img/modal/mod-girl-desk@2x.jpg');
     }
   }
-
   .modal-cards {
     gap: 20px;
   }
-
   .modal-card-item {
     width: 257px;
     height: 308px;
   }
-
   .mod-tumb {
     width: 243px;
     height: 200px;
   }
-
   .modal-subtitle {
     font-size: 24px;
     line-height: 1.16;
     margin-bottom: 8px;
   }
-
   .modal-form {
     width: 360px;
   }

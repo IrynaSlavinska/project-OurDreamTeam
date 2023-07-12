@@ -22,3 +22,20 @@ let input = document.querySelector("#bank-card-input"),
                 input.value += " "
             }
         })
+
+
+       const modalCheckboxContainers = document.querySelectorAll(
+  '.modal-checkbox-container'
+);
+const checkboxes = document.querySelectorAll('.check-input');
+modalCheckboxContainers.forEach((container, index) => {
+  container.addEventListener('click', () => {
+    checkboxes[index].checked = !checkboxes[index].checked;
+  });
+  container.addEventListener('keydown', event => {
+    if (event.key === ' ') {
+      event.preventDefault();
+      checkboxes[index].checked = !checkboxes[index].checked;
+    }
+  });
+});
