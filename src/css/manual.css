@@ -125,13 +125,10 @@
 @media screen and (min-width: 1280px) {
   .manual-container.container {
   }
-
   .bg-wrap {
-    /* gap: 110px; */
-    justify-content: space-between;
-  }
-  .manual-image img {
-    margin-left: 80px;
+    padding-left: 80px;
+    gap: 110px;
+    justify-content: flex-end;
   }
   .manual-wrap {
     padding-right: 40px;
