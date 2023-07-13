@@ -181,11 +181,13 @@
     margin-bottom: 0;
   }
   .footer_nav_list {
-    align-items: center;
+    margin-top: 84px;
   }
   .footer_wrap_contact {
-    justify-content: space-between;
     flex-direction: column;
     display: flex;
+  }
+  .footer_soc_list {
+    justify-content: center;
   }
 }
