@@ -55,7 +55,7 @@
   letter-spacing: -0.04em;
   text-transform: uppercase;
   color: var(--text-color);
-  text-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.1);
+  text-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
 }
 .modal-close-btn {
   display: flex;
@@ -303,7 +303,6 @@ input::-webkit-inner-spin-button {
     line-height: 1.1;
     letter-spacing: -0.04em;
     text-transform: uppercase;
-    text-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.1);
   }
   .modal-cards {
     flex-direction: row;

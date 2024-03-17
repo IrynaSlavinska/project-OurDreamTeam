@@ -64,7 +64,7 @@
 .headerlogo-icon {
   fill: var(--logo-color);
   transition: transform 250ms linear;
-  rotate: 0;
+  transform: rotate(0);
 }
 .headerlogo-link:hover .headerlogo-icon {
   transform: rotate(90deg);
@@ -124,13 +124,13 @@
     opacity: 1;
   }
   100% {
-    transform: translateX(100px); 
+    transform: translateX(100px);
     opacity: 0;
   }
 }
 
 .header-button:focus {
-  animation: moveright 3s linear forwards; 
+  animation: moveright 3s linear forwards;
 }
 .menu-toggle.js-open-menu,
 .menu-toggle.js-close-menu {
