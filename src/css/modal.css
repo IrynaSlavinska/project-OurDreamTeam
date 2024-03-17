@@ -70,9 +70,6 @@
   border: none;
   background-color: transparent;
 }
-.modal-close-btn:hover,
-.modal-close-btn:focus {
-}
 .modal-close-icon {
   width: 24px;
   height: 24px;
@@ -208,17 +205,6 @@
   line-height: 1.28;
   letter-spacing: -0.04em;
 }
-/* Прибирає личильник з інпута "намбер": */
-/* Chrome, Safari, Edge, Opera */
-/* input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-} */
-/* Firefox */
-/* input[type='number'] {
-  -moz-appearance: textfield;
-} */
 .modal-btn-send {
   min-width: 92px;
   padding: 12px 24px;
@@ -256,12 +242,7 @@ input::-webkit-inner-spin-button {
 .check-input:checked ~ .check-label .check-span {
   fill: var(--dark-green-color);
 }
-/* .modal-card-item .check-input:focus ~ .modal-content,
-.modal-card-item:hover .modal-content {
-  border-color: var(--dark-green-color);
-} */
-/* MEDIA MEDIA MEDIA MEDIA MEDIA */
-/* MEDIA MEDIA MEDIA MEDIA MEDIA */
+
 /* MEDIA MEDIA MEDIA MEDIA MEDIA */
 @media screen and (min-width: 375px) {
 }

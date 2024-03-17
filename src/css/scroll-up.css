@@ -15,7 +15,6 @@
 }
 
 .scroll-up-btn.show {
-  /* display: block; */
   opacity: 1;
   height: 40px;
 }
