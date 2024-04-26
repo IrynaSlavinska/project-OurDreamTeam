@@ -20,7 +20,9 @@ import './js/scroll-up';
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
   refs.modal.addEventListener('click', onBackdropClose);
+
   document.body.addEventListener('keydown', onEscClose);
+
   function onBackdropClose(e) {
     if (e.currentTarget !== e.target) {
       return;
@@ -39,5 +41,10 @@ import './js/scroll-up';
   }
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
+    if (refs.modal.classList.contains('is-hidden')) {
+      document.body.style.overflow = 'auto';
+    } else {
+      document.body.style.overflow = 'hidden';
+    }
   }
 })();
